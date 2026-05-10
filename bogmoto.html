@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotoBog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: #0f172a; color: #e5e7eb; }
+
+    header { background: linear-gradient(90deg,#111827,#1f2937); padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 32px; color: #22c55e; }
+
+    nav { display: flex; justify-content: center; gap: 15px; background: #020617; padding: 10px; }
+    nav a { color: #e5e7eb; text-decoration: none; padding: 8px 14px; border-radius: 8px; transition: 0.3s; }
+    nav a:hover { background: #22c55e; color: #020617; }
+
+    section { display: none; padding: 30px; animation: fade 0.4s ease; }
+    section.active { display: block; }
+
+    @keyframes fade { from {opacity:0;} to {opacity:1;} }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 20px; }
+
+    .card { background: #1e293b; border-radius: 16px; padding: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.4); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+
+    img { width: 100%; border-radius: 12px; }
+
+    h2 { color: #22c55e; }
+
+    button { background: #22c55e; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+    button:hover { background: #16a34a; }
+
+    form input, form textarea { width: 100%; padding: 10px; margin: 6px 0; border-radius: 8px; border: none; }
+
+    footer { text-align: center; padding: 20px; background: #020617; margin-top: 30px; }
+
+    .contacts { background:#1e293b; padding:15px; border-radius:12px; margin-top:20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MotoBog</h1>
+  <p>Universul motocicletelor 🏍️</p>
+</header>
+
+<nav>
+  <a href="#" onclick="showPage('home')">Acasă</a>
+  <a href="#" onclick="showPage('sport')">Sport</a>
+  <a href="#" onclick="showPage('cruiser')">Cruiser</a>
+  <a href="#" onclick="showPage('adventure')">Adventure</a>
+  <a href="#" onclick="showPage('naked')">Naked</a>
+  <a href="#" onclick="showPage('contact')">Contact</a>
+</nav>
+
+<section id="home" class="active">
+  <h2>Bine ai venit pe MotoBog</h2>
+  <p>Alege tipul de motocicletă preferat și explorează 🚀</p>
+</section>
+
+<section id="sport">
+  <h2>Motociclete Sport</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="c:\Users\dbogd\Downloads\2020-yamaha-r1-3.webp">
+      <h3>Yamaha R1</h3>
+      <p>998cc • 200CP • 299km/h</p>
+    </div>
+    <div class="card">
+      <img src="c:\Users\dbogd\Downloads\2023_Kawasaki_zx10r_2.webp">
+      <h3>Ninja ZX-10R</h3>
+      <p>998cc • 203CP • 300km/h</p>
+    </div>
+  </div>
+</section>
+
+<section id="cruiser">
+  <h2>Motociclete Cruiser</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="c:\Users\dbogd\Downloads\IZMXUULYYVEGDC2QSHIK355BFM.avif">
+      <h3>Harley 883</h3>
+      <p>883cc • Stil clasic</p>
+    </div>
+    <div class="card">
+      <img src="c:\Users\dbogd\Downloads\2000000001.jpg">
+      <h3>Indian Scout</h3>
+      <p>1133cc • Confort ridicat</p>
+    </div>
+  </div>
+</section>
+
+<section id="adventure">
+  <h2>Motociclete Adventure</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="c:\Users\dbogd\Downloads\images.jpg">
+      <h3>BMW GS 1250 </h3>
+      <p>1254cc • Off-road + touring</p>
+    </div>
+    <div class="card">
+      <img src="c:\Users\dbogd\Downloads\2024-BMW-R-1300-GS-0-Hero.jpg">
+      <h3>BMW GS 1300</h3>
+      <p>1301cc • Putere mare</p>
+    </div>
+  </div>
+</section>
+
+<section id="naked">
+  <h2>Motociclete Naked</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="c:\Users\dbogd\Downloads\2025-yamaha-mt07a-eu-icon_blue-360-degrees-001-03.jpg">
+      <h3>Yamaha MT-07</h3>
+      <p>689cc • Ușoară și agilă</p>
+    </div>
+    <div class="card">
+      <img src="c:\Users\dbogd\Downloads\2019-ducati-monster-821-stealth-lg.jpg">
+      <h3>Ducati Monster</h3>
+      <p>821cc • Design agresiv</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <form>
+    <input type="text" placeholder="Nume">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Mesaj"></textarea>
+    <button type="submit">Trimite</button>
+  </form>
+
+  <div class="contacts">
+    <h3>Date de contact</h3>
+    <p>Email: motobog@email.com</p>
+    <p>Telefon: +373 600 12345</p>
+    <p>Adresă: Str. Libertății 10, Chișinău</p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 MotoBog</p>
+</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
